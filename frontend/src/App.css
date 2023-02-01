@@ -34,8 +34,8 @@ ul {
 :root {
   --beige: #fff9f0;
   --darkbeige: #e7d4b3;
-  --green: #5c7c79;
-  --darkgreen: #2b444d;
+  --green: #5bbdb3;
+  --darkgreen: #315866;
   --grey: #e0ded4;
   --white: #ffffff;
   --black: #000000;
@@ -58,7 +58,7 @@ h2 {
 }
 h3 {
   font-family: var(--title-font-family-jost);
-  font-size: 1.4vw;
+  font-size: 1.2vw;
 }
 h4 {
   font-family: var(--title-font-family-jost);
