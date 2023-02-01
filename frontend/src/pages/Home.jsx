@@ -33,7 +33,7 @@ export default function Home() {
               dolorum eligendi, reiciendis laborum ducimus obcaecati, est
               debitis, fugiat error. Odio, recusandae.
             </p>
-            <NavLink to="/findmybook">
+            <NavLink to="/findyourbook">
               <button type="button" className="main_page_button">
                 Find my book
               </button>

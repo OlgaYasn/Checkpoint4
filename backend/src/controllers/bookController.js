@@ -15,6 +15,23 @@ const bookController = {
       .catch((err) => next(err));
   },
 
+  createBook: async (req, res, next) => {
+    const { title, pages, description } = req.body;
+    bookModel
+      .create({
+        title,
+        pages,
+        description,
+      })
+      .then(([consultant]) =>
+        res.status(201).send({
+          mesage: "book created",
+          id: consultant.insertId,
+        })
+      )
+      .catch((err) => next(err));
+  },
+
   updateBook: (req, res, next) => {
     const { id } = req.params;
     const book = req.body;
