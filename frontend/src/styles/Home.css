@@ -1,3 +1,66 @@
 .mainimage_book {
-  height: 74vh;
+  height: 75vh;
+}
+
+.mainpage_images {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5vw;
+}
+
+.mainpage_side_images {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+}
+
+.mainimage_pile {
+  width: 25vw;
+  margin-top: 2vh;
+}
+
+.mainpage_text_block {
+  margin: 8vh 6vw;
+}
+
+.mainpage_text {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainpage_text p {
+  margin-bottom: 3vh;
+}
+
+.main_page_button {
+  background-color: var(--darkbeige);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--darkgreen);
+  cursor: pointer;
+  font-size: 2.1vh;
+  font-weight: 600;
+  outline: none;
+  padding: 1.7vh 2vw;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.main_page_button:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.main_page_button:hover {
+  background-color: var(--green);
+  color: var(--beige);
+  transform: scale(0.96);
 }
