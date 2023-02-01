@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/Filter.css";
 
 function Filter() {
   return (
-    <div className="publication_date_box">
-      <div className="date_titleblock">
-        <h2 className="date_title"> Genre</h2>
+    <div className="filter_box">
+      <div className="filter_titleblock">
+        <h2 className="filtre_title"> Genre</h2>
       </div>
       {/* <div className="date_body">
         <fieldset>
