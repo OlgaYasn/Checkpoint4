@@ -1,11 +1,14 @@
 import { React, useState, useEffect } from "react";
-import Filter from "../components/Filter";
+import CategoryFilter from "../components/CategoryFilter";
+import StateFilter from "../components/StateFilter";
 import Bookcard from "../components/Bookcard";
+import PageBox from "../components/PageBox";
 import { GetAllBooks } from "../../utils/getAllBooks";
 import "../styles/FindYourBook.css";
 
 function FindYourBook() {
   const [books, setBooks] = useState([]);
+  const [pages, setPages] = useState(0);
 
   const listAllBooks = async () => {
     setBooks(await GetAllBooks());
@@ -18,7 +21,9 @@ function FindYourBook() {
   return (
     <div className="findbook_page">
       <div className="filters">
-        <Filter />
+        <CategoryFilter />
+        <StateFilter />
+        <PageBox pages={pages} setPages={setPages} />
       </div>
       <div>
         <h2> Let's find a perfect match </h2>
