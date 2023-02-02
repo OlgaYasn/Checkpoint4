@@ -75,3 +75,26 @@
   color: var(--beige);
   transform: scale(0.96);
 }
+
+.modify_delete_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modify_delete_buttons button {
+  background: var(--white);
+  color: var(--green);
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6vw;
+  height: 5vh;
+  -webkit-box-shadow: -2px 3px 4px 0px rgb(184 197 235);
+  box-shadow: -2px 3px 4px 0px rgb(184 197 235);
+  border: unset;
+  cursor: pointer;
+  margin-left: 2vw;
+  margin-top: 1vh;
+}

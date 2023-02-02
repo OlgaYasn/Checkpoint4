@@ -4,7 +4,7 @@ const findAll = () => {
   return db
     .promise()
     .query(
-      "SELECT b.title, a.firstname as authorfirstname, a.lastname as authorlastname, b.description,b.category_id, b.pages, s.condition, c.type, u.firstname, u.lastname, b.image FROM book as b INNER JOIN author as a ON b.author_id = a.id INNER JOIN state as s ON b.state_id = s.id INNER JOIN category as c ON b.category_id = c.id INNER JOIN user as u ON b.user_id = u.id"
+      "SELECT b.id, b.title, a.firstname as authorfirstname, a.lastname as authorlastname, b.description,b.category_id, b.pages, s.condition, c.type, u.firstname, u.lastname, b.image FROM book as b INNER JOIN author as a ON b.author_id = a.id INNER JOIN state as s ON b.state_id = s.id INNER JOIN category as c ON b.category_id = c.id INNER JOIN user as u ON b.user_id = u.id"
     )
     .then((books) => books);
 };

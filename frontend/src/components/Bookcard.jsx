@@ -1,15 +1,41 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ImgCard from "./ImgCard";
+import { DeleteBook } from "../../utils/deleteBook";
+import { GetAllBooks } from "../../utils/getAllBooks";
 import "../styles/Bookcard.css";
 
-function Bookcard({ book }) {
+function Bookcard({ book, setBooks }) {
+  const listAllBooks = async () => {
+    setBooks(await GetAllBooks());
+  };
+
+  const handleClick = () => {
+    DeleteBook(book.id)
+      .then(() => listAllBooks())
+      .catch((err) => console.warn(err));
+  };
+
   return (
     <div className="book_card">
       <div className="bookcover">
         <ImgCard image={book.image} />
       </div>
       <div className="book_information">
+        <div className="modify_delete_buttons">
+          <button type="button" className="button_book_modify">
+            {" "}
+            Modifier
+          </button>
+          <button
+            type="button"
+            className="button_book_delete"
+            onClick={handleClick}
+          >
+            {" "}
+            Supprimer
+          </button>
+        </div>
         <h2 className="bookcard_title">{book.title}</h2>
         <h3 className="bookcard_author">
           by {book.authorfirstname} {book.authorlastname}
@@ -46,5 +72,6 @@ function Bookcard({ book }) {
 }
 Bookcard.propTypes = {
   book: PropTypes.string.isRequired,
+  setBooks: PropTypes.func.isRequired,
 };
 export default Bookcard;

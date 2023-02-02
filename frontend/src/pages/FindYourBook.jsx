@@ -28,6 +28,9 @@ function FindYourBook() {
         <PageBox pages={pages} setPages={setPages} />
       </div>
       <div>
+        <div className="add_book_button">
+          <button type="button">Add new book</button>
+        </div>
         <h2> Let's find a perfect match </h2>
 
         <div>
@@ -38,7 +41,7 @@ function FindYourBook() {
                 Number(book.category_id) === Number(filterBook)
             )
             .map((book) => (
-              <Bookcard key={book.id} book={book} />
+              <Bookcard key={book.id} book={book} setBooks={setBooks} />
             ))}
         </div>
       </div>

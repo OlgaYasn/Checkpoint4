@@ -3,3 +3,25 @@
   flex-direction: row;
   gap: 5vh;
 }
+
+.add_book_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2vh;
+}
+.add_book_button button {
+  background: var(--darkgreen);
+  color: var(--beige);
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 5.5vh;
+  -webkit-box-shadow: -2px 3px 4px 0px rgb(184 197 235);
+  box-shadow: -2px 3px 4px 0px rgb(184 197 235);
+  border: unset;
+  cursor: pointer;
+}
