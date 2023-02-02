@@ -1,0 +1,13 @@
+.pages_box {
+  width: 20vw;
+  background-color: var(--darkbeige);
+  padding: 3vh 3vw;
+  margin: 5vh 5vw;
+  border-radius: 30px;
+  -webkit-box-shadow: -2px 3px 4px 0px rgb(202, 167, 138);
+  box-shadow: 4px 4px 4px 0px rgb(202, 167, 138);
+}
+
+.pages_title {
+  margin-bottom: 2vh;
+}

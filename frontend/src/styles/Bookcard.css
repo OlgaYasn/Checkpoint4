@@ -1,0 +1,100 @@
+.book_card {
+  display: flex;
+  flex-direction: row;
+  width: 55vw;
+  gap: 2vw;
+  background-color: #f0e7d6;
+  padding: 4vh 2vw;
+  margin: 3vh 2vw;
+  border-radius: 30px;
+  -webkit-box-shadow: -2px 3px 4px 0px rgb(184 197 235);
+  box-shadow: 4px 4px 4px 0px rgb(168, 192, 188);
+}
+
+.bookcard_title {
+  color: var(--green);
+  margin-top: 2vh;
+}
+
+.bookcard_author {
+  color: var(--dakgreen);
+}
+
+.book_properties {
+  margin-top: 3vh;
+}
+
+.other_properties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vh;
+  margin-top: 2vh;
+}
+
+.other_properties_title {
+  color: var(--darkgreen);
+  font-weight: 600;
+}
+
+.book_card_button_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  margin-right: 15vh;
+}
+
+.book_card_button {
+  background-color: var(--green);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 2.1vh;
+  font-weight: 600;
+  outline: none;
+  padding: 1.7vh 2vw;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.book_card_button:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.book_card_button:hover {
+  background-color: var(--darkgreen);
+  color: var(--beige);
+  transform: scale(0.96);
+}
+
+.modify_delete_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modify_delete_buttons button {
+  background: var(--white);
+  color: var(--green);
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6vw;
+  height: 5vh;
+  -webkit-box-shadow: -2px 3px 4px 0px rgb(184 197 235);
+  box-shadow: -2px 3px 4px 0px rgb(184 197 235);
+  border: unset;
+  cursor: pointer;
+  margin-left: 2vw;
+  margin-top: 1vh;
+}

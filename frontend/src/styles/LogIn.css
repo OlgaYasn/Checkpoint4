@@ -1,0 +1,77 @@
+.login_page {
+  display: flex;
+  flex-direction: row;
+  gap: 5vh;
+}
+
+.loginbook_image {
+  height: 68vh;
+  border-radius: 35px;
+}
+
+.login_form {
+  margin: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connexion-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  text-align: left;
+  padding: 1.5vw;
+  background: #fdf4e7;
+  box-shadow: 0px 0px 8px 1px var(--grey);
+  -webkit-box-shadow: 0px 0px 8px 1px var(--darkbeige);
+  -moz-box-shadow: 0px 0px 8px 1px var(--green);
+  color: var(--bleu);
+  height: 45vh;
+  border-radius: 35px;
+  gap: 4vh;
+  margin-top: 5vh;
+}
+
+.connexion-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1vh;
+}
+
+.connexion-input input,
+.connexion-button button {
+  padding: 2.5vh;
+  border-radius: 10px;
+  border: var(--darkgreen) 1px solid;
+  background: white;
+  color: var(--black);
+  width: 20vw;
+  height: 2vh;
+  box-shadow: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+.connexion-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background-color: var(--darkbeige);
+  color: var(--black);
+  width: 14vw;
+  cursor: pointer;
+}
+
+.connexion-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+  width: 20vw;
+}
