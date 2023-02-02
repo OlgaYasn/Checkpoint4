@@ -25,3 +25,9 @@
   border: unset;
   cursor: pointer;
 }
+
+.showfiche{
+  position: relative;
+  background-color: var(--beige);
+  right: 70vw;
+}

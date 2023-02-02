@@ -23,10 +23,10 @@ const bookController = {
         pages,
         description,
       })
-      .then(([consultant]) =>
+      .then(([book]) =>
         res.status(201).send({
           mesage: "book created",
-          id: consultant.insertId,
+          id: book.insertId,
         })
       )
       .catch((err) => next(err));

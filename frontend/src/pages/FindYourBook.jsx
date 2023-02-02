@@ -37,12 +37,11 @@ function FindYourBook() {
         <div className="add_book_button">
           <button type="button" onClick={handleClick}>
             Add new book
-          </button>
+          </button>{" "}
         </div>
         <h2> Let's find a perfect match </h2>
 
         <div>
-          <FicheBook showFiche={showFiche} setShowFiche={setShowFiche} />
           {books
             .filter(
               (book) =>
@@ -53,6 +52,11 @@ function FindYourBook() {
               <Bookcard key={book.id} book={book} setBooks={setBooks} />
             ))}
         </div>
+      </div>
+      <div className="showfiche">
+        {showFiche && (
+          <FicheBook showFiche={showFiche} setShowFiche={setShowFiche} />
+        )}
       </div>
     </div>
   );
