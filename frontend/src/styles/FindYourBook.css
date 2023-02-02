@@ -26,7 +26,7 @@
   cursor: pointer;
 }
 
-.showfiche{
+.showfiche {
   position: relative;
   background-color: var(--beige);
   right: 70vw;

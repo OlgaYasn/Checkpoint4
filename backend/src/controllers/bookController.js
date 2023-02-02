@@ -18,7 +18,7 @@ const bookController = {
   createBook: async (req, res, next) => {
     const { title, pages, description } = req.body;
     bookModel
-      .create({
+      .createOne({
         title,
         pages,
         description,

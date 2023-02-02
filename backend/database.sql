@@ -19,13 +19,13 @@ CREATE TABLE `user` (
 
 CREATE TABLE `book` (
     `id` INT AUTO_INCREMENT NOT NULL ,
-    `title` VARCHAR(50)  NOT NULL ,
-    `author_id` INT  NOT NULL ,
+    `title` VARCHAR(50) NULL ,
+    `author_id` INT NULL ,
     `pages` int  NULL ,
     `description` VARCHAR(500)  NULL ,
     `state_id` INT NULL ,
     `category_id` INT NULL ,
-    `user_id` INT  NOT NULL,
+    `user_id` INT NULL,
     `image` VARCHAR(50)  NULL ,
      PRIMARY KEY (
         `id`

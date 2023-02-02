@@ -29,7 +29,7 @@ function CategoryFilter({ setFilterBook }) {
               value="0"
               onChange={(e) => setFilterBook(e.target.id)}
             />
-            <label className="input_label" htmlFor="0">
+            <label className="input_label_category" htmlFor="0">
               All
             </label>
             {categories.map((category) => (
@@ -42,7 +42,7 @@ function CategoryFilter({ setFilterBook }) {
                   value={category.id}
                   onChange={(e) => setFilterBook(e.target.id)}
                 />
-                <label className="input_label" htmlFor={category.id}>
+                <label className="input_label_category" htmlFor={category.id}>
                   {category.type}
                 </label>
               </div>
