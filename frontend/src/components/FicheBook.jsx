@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import AddBookInput from "./AddBookInput";
 import dataFicheBook from "../../utils/dataFicheBook";
-import booklogo from "../assets/images/booklogo.jpg";
+import booklogo from "../assets/images/booklogo.svg";
 import close from "../assets/images/annuler.png";
 import "../styles/FicheBook.css";
 
@@ -53,7 +53,7 @@ function FicheBook({ showFiche, setShowFiche }) {
   return (
     <div className="fiche_book_container">
       <div className="fiche_book_header">
-        <h1> New book</h1>
+        <h2> New book</h2>
         <div
           onClick={handleClick}
           onKeyDown={handleClick}
@@ -63,56 +63,49 @@ function FicheBook({ showFiche, setShowFiche }) {
           <img src={close} alt="close" className="close_fiche_book" />
         </div>
       </div>
-      <div className="fiche_book_body_footer">
-        <div className="fiche_book_body">
-          <form className="fiche_book_form" onSubmit={postbook}>
-            <div className="book_information_block">
-              <div className="book_information_inputs">
-                {dataFicheBook.map((data) => (
-                  <AddBookInput
-                    key={data.id}
-                    id={data.id}
-                    label={data.label}
-                    type={data.type}
-                    name={data.name}
-                    placeholder={data.placeholder}
-                    value={addNewBook[data.name] || ""}
-                    className={data.className}
-                    addNewBook={addNewBook}
-                    setAddNewBook={setAddNewBook}
-                  />
-                ))}
-              </div>
-              <div className="book_image_container">
-                <img
-                  src={booklogo}
-                  alt="booklogo"
-                  className="book_logo_image"
-                />
-                <button type="button" className="button_change_image">
-                  {" "}
-                  Change picture{" "}
-                </button>
-              </div>
-            </div>
-
-            <div className="fiche_book_footer">
-              {message && (
-                <h3 className="popup_notification">
-                  {" "}
-                  This book was sucessfully added{" "}
-                </h3>
-              )}
-              <button
-                type="submit"
-                className="button_save_book"
-                onClick={showMessage}
-              >
-                SAUVEGARDER{" "}
-              </button>
-            </div>
-          </form>
+      <div className="fiche_book_body">
+        <div className="book_image_container">
+          <img src={booklogo} alt="booklogo" className="book_logo_image" />
+          <button type="button" className="button_change_image">
+            {" "}
+            Change picture{" "}
+          </button>
         </div>
+
+        <form className="fiche_book_form" onSubmit={postbook}>
+          <div className="book_information_inputs">
+            {dataFicheBook.map((data) => (
+              <AddBookInput
+                key={data.id}
+                id={data.id}
+                label={data.label}
+                type={data.type}
+                name={data.name}
+                placeholder={data.placeholder}
+                value={addNewBook[data.name] || ""}
+                className={data.className}
+                addNewBook={addNewBook}
+                setAddNewBook={setAddNewBook}
+              />
+            ))}
+          </div>
+
+          <div className="fiche_book_footer">
+            {message && (
+              <h3 className="popup_notification">
+                {" "}
+                This book was sucessfully added{" "}
+              </h3>
+            )}
+            <button
+              type="submit"
+              className="button_save_book"
+              onClick={showMessage}
+            >
+              SAVE{" "}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

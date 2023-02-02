@@ -42,6 +42,7 @@ function FindYourBook() {
         <h2> Let's find a perfect match </h2>
 
         <div>
+          <FicheBook showFiche={showFiche} setShowFiche={setShowFiche} />
           {books
             .filter(
               (book) =>
@@ -53,7 +54,6 @@ function FindYourBook() {
             ))}
         </div>
       </div>
-      <FicheBook showFiche={showFiche} setShowFiche={setShowFiche} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import "../styles/AddBookInput.css";
 
 function AddBookInput({
   id,
@@ -20,8 +21,11 @@ function AddBookInput({
   };
 
   return (
-    <div key={id}>
-      <label htmlFor={name}> {label}</label>
+    <div key={id} className="input_block">
+      <label htmlFor={name} className="input_label">
+        {" "}
+        {label}
+      </label>
       <input
         type={type}
         name={name}

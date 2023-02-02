@@ -1,0 +1,9 @@
+.input_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_label {
+  margin: 1vh 1vw;
+  font-size: 1.9vh;
+}
