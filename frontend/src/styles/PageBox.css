@@ -1,4 +1,4 @@
-.filter_box {
+.pages_box {
   width: 20vw;
   background-color: var(--darkbeige);
   padding: 3vh 3vw;
@@ -8,14 +8,6 @@
   box-shadow: 4px 4px 4px 0px rgb(202, 167, 138);
 }
 
-.filtre_title {
+.pages_title {
   margin-bottom: 2vh;
-}
-
-.input_category {
-  margin-bottom: 1vh;
-}
-
-.input_label {
-  margin-left: 1vw;
 }

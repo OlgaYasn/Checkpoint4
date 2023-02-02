@@ -1,8 +1,9 @@
 import { React, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { GetAllCategories } from "../../utils/getAllCategories";
 import "../styles/Filter.css";
 
-function Filter() {
+function CategoryFilter({ setFilterBook }) {
   const [categories, setCategories] = useState([]);
 
   const listAllCategories = async () => {
@@ -11,32 +12,39 @@ function Filter() {
   useEffect(() => {
     listAllCategories();
   }, []);
+
   return (
     <div className="filter_box">
       <div className="filter_titleblock">
-        <h2 className="filtre_title"> Choose your category</h2>
+        <h4 className="filtre_title"> Choose your category</h4>
       </div>
-      <div className="date_body">
+      <div className="filtre_body">
         <form>
           <fieldset>
             <input
               className="input_category"
               type="radio"
               id="0"
-              name="category_filter"
+              name="category_id"
               value="0"
+              onChange={(e) => setFilterBook(e.target.id)}
             />
-            <label htmlFor="0">Tous</label>
+            <label className="input_label" htmlFor="0">
+              All
+            </label>
             {categories.map((category) => (
               <div>
                 <input
                   className="input_category"
                   type="radio"
                   id={category.id}
-                  name="category_filter"
+                  name="category_id"
                   value={category.id}
+                  onChange={(e) => setFilterBook(e.target.id)}
                 />
-                <label htmlFor={category.id}>{category.type}</label>
+                <label className="input_label" htmlFor={category.id}>
+                  {category.type}
+                </label>
               </div>
             ))}
           </fieldset>
@@ -45,5 +53,7 @@ function Filter() {
     </div>
   );
 }
-
-export default Filter;
+CategoryFilter.propTypes = {
+  setFilterBook: PropTypes.func.isRequired,
+};
+export default CategoryFilter;

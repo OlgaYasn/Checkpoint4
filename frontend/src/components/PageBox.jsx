@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../styles/PageBox.css";
 
 function PageBox({ pages, setPages }) {
   return (
     <div className="pages_box">
       <div className="pages_titleblock">
-        <h2 className="pages_title"> Nombre des pages</h2>
+        <h4 className="pages_title"> Number of pages</h4>
       </div>
       <div className="pages_body">
         <label htmlFor="pages"> </label>
@@ -18,7 +19,7 @@ function PageBox({ pages, setPages }) {
         />{" "}
         <h3>
           {" "}
-          <span>Nombre des pages </span>
+          <span>Number : </span>
           <span>{pages} </span>
         </h3>
       </div>

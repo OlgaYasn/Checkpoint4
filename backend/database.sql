@@ -89,7 +89,7 @@ INSERT INTO checkpoint4.`user` (firstname,lastname,email,city,postal_code,countr
 	 ('Romance'),
 	 ('Action and Adventure'),
 	 ('Classics'),
-	 ('Comic Book or Graphic Novel'),
+	 ('Comic Book'),
 	 ('Detective and Mystery'),
 	 ('Fantasy'),
 	 ('Historical Fiction'),
@@ -97,7 +97,7 @@ INSERT INTO checkpoint4.`user` (firstname,lastname,email,city,postal_code,countr
 	 ('Short Stories'),
 	 ('Suspense and Thrillers'),
 	 ('Cookbooks'),
-	 ('Science Fiction (Sci-Fi)');
+	 ('Science Fiction');
 
 INSERT INTO checkpoint4.state (`condition`) VALUES
 	 ('new'),
