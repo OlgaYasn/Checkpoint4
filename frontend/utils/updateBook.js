@@ -7,6 +7,6 @@ const requestApi = (finalUrl, data) => {
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export const UpdateUser = (user) => {
-  return requestApi(`user/${user.id}`, user);
+export const UpdateBook = (book) => {
+  return requestApi(`updatebook/${book.id}`, book);
 };
